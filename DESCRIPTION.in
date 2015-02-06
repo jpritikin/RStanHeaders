@@ -8,3 +8,4 @@ URL: http://mc-stan.org/
 Description: The C++ header files associated with the Stan project.
 Suggests: RcppEigen
 Version: VERSION
+License: BSD
