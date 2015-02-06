@@ -5,8 +5,8 @@ set -o nounset
 set -o noclobber
 
 boost=1.55.0
-version=2.6.0
-git_version=v$version
+version=2.6.0-1
+git_version=v2.6.0
 
 # replace with a path to your local clone
 giturl=/opt/cmdstan/stan
@@ -22,3 +22,5 @@ git archive --format=tar --remote=$giturl $git_version:lib/boost_$boost/  | (cd 
 today=$(date +%Y-%m-%d)
 rm -f DESCRIPTION
 perl -pe "s/VERSION/$version/; s/TODAY/$today/" < DESCRIPTION.in > DESCRIPTION
+
+R CMD build .
