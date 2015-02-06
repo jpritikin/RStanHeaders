@@ -4,8 +4,7 @@ set -o errexit
 set -o nounset
 set -o noclobber
 
-boost=1.55.0
-version=2.6.0-2
+version=2.6.0-3
 git_version=v2.6.0
 
 # replace with a path to your local clone
@@ -17,11 +16,10 @@ tarop=--extract
 rm -rf inst/include/stan
 mkdir -p inst/include/stan
 git archive --format=tar --remote=$giturl $git_version:src/stan  | (cd inst/include/stan; tar $tarop --file - )
-git archive --format=tar --remote=$giturl $git_version:lib/boost_$boost/  | (cd inst/include; tar $tarop --file - )
 
 today=$(date +%Y-%m-%d)
 rm -f DESCRIPTION
 perl -pe "s/VERSION/$version/; s/TODAY/$today/" < DESCRIPTION.in > DESCRIPTION
 
-rm -f RStanHeaders*.tar.gz
+rm -f StanHeaders*.tar.gz
 R CMD build .

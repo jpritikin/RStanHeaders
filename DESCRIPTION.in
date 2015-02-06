@@ -1,4 +1,4 @@
-Package: RStanHeaders
+Package: StanHeaders
 Date: TODAY
 Title: C++ header files for Stan
 Authors@R: c(person("Joshua",family="Pritikin", email="jpritikin@pobox.com", role=c('cre','aut')))
@@ -6,7 +6,7 @@ Author: Joshua N. Pritikin
 Maintainer: Joshua Pritikin <jpritikin@pobox.com>
 URL: http://mc-stan.org/
 Description: The C++ header files associated with the Stan project.
-Suggests: RcppEigen
+Suggests: RcppEigen, BH
 Version: VERSION
-License: file LICENSE
-License_is_FOSS: yes
+License: BSD_3_clause
+URL: http://mc-stan.org/
