@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+set -o noclobber
+
+boost=1.55.0
+version=2.6.0
+git_version=v$version
+
+# replace with a path to your local clone
+giturl=/opt/cmdstan/stan
+
+#tarop=--list
+tarop=--extract
+
+rm -rf inst/include/stan
+mkdir -p inst/include/stan
+git archive --format=tar --remote=$giturl $git_version:src/stan  | (cd inst/include/stan; tar $tarop --file - )
+git archive --format=tar --remote=$giturl $git_version:lib/boost_$boost/  | (cd inst/include; tar $tarop --file - )
+
+today=$(date +%Y-%m-%d)
+rm -f DESCRIPTION
+perl -pe "s/VERSION/$version/; s/TODAY/$today/" < DESCRIPTION.in > DESCRIPTION
