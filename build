@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o noclobber
 
-version=2.6.0-5
+version=2.6.0-6
 git_version=v2.6.0
 
 # replace with a path to your local clone
