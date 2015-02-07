@@ -1,6 +1,6 @@
 Package: StanHeaders
 Date: TODAY
-Title: C++ header files for Stan
+Title: C++ Header Files for Stan
 Authors@R: c(person("Joshua",family="Pritikin", email="jpritikin@pobox.com", role=c('cre','aut')))
 Author: Joshua N. Pritikin
 Maintainer: Joshua Pritikin <jpritikin@pobox.com>
