@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o noclobber
 
-version=2.6.0-8
+version=2.6.0-9
 git_version=v2.6.0
 
 # replace with a path to your local clone
@@ -23,4 +23,4 @@ perl -pe "s/VERSION/$version/; s/TODAY/$today/" < DESCRIPTION.in > DESCRIPTION
 
 rm -f StanHeaders*.tar.gz
 R CMD build .
-rm -f DESCRIPTION
+mv DESCRIPTION DESCRIPTION.old  # keep it around, but prevent accidental editing
