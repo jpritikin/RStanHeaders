@@ -2,7 +2,6 @@ Package: StanHeaders
 Date: TODAY
 Title: C++ Header Files for Stan
 Authors@R: c(person("Joshua",middle="N.", family="Pritikin", email="jpritikin@pobox.com", role=c('cre','aut')))
-Maintainer: Joshua Pritikin <jpritikin@pobox.com>
 URL: http://mc-stan.org/
 Description: The C++ header files associated with the Stan project. Stan is a probabilistic programming language implementing full Bayesian statistical inference with MCMC sampling and penalized maximum likelihood estimation with optimization.
 Suggests: RcppEigen, BH
