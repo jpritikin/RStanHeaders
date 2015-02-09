@@ -1,4 +1,6 @@
 /inst/include
 /DESCRIPTION
+/DESCRIPTION.old
 *.tar.gz
 /RStanHeaders.Rcheck
+/staging
